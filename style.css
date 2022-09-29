@@ -20,17 +20,93 @@ body {
   background-color: #ecf0f1;
 }
 
-header {
+/* *************** Header *************** */
+.header {
   position: sticky;
   top: 0;
-  background-color: #34495e;
+  background-color: #212529;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
-h1 {
+.header > div {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link-name a {
+  font-size: 1rem;
+  padding: 0.3rem;
+  color: #1ec896;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.link-name a:hover {
+  font-size: 1.1rem;
+}
+
+.link-media a {
+  margin: 0 0.3rem;
+}
+
+.link-media svg {
+  width: 25px;
+  height: 25px;
+  fill: #1ec896;
+  transition: all 0.3s ease;
+}
+
+.link-media svg:hover {
+  width: 28px;
+  height: 28px;
+}
+
+.title {
   text-align: center;
-  font-size: 2rem;
-  padding: 1rem;
+  font-size: 1.8rem;
+  padding: 0.5rem;
   color: #ecf0f1;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-name a {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .link-name a:hover {
+    font-size: 1.6rem;
+  }
+
+  .link-media a {
+    margin: 0 0.6rem;
+  }
+
+  .link-media svg {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+  }
+
+  .link-media svg:hover {
+    width: 34px;
+    height: 34px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
 }
 
 .content {
