@@ -33,7 +33,7 @@ body {
 }
 
 .header > div {
-  width: 25%;
+  width: 42%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -74,11 +74,15 @@ a {
 .title {
   text-align: center;
   font-size: 1.6rem;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   color: #ecf0f1;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
+  .header > div {
+    width: 20%;
+  }
+
   .link-name a {
     font-size: 1.6rem;
     transition: all 0.3s ease;
@@ -108,17 +112,50 @@ a {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .header > div {
+    width: 15%;
+  }
+
+  .link-name a {
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+  }
+
+  .link-name a:hover {
+    font-size: 2rem;
+  }
+
+  .link-media a {
+    margin: 0 0.6rem;
+  }
+
+  .link-media svg {
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s ease;
+  }
+
+  .link-media svg:hover {
+    width: 36px;
+    height: 36px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
 .content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 350px));
-  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
+  justify-content: space-evenly;
 }
 
 .section {
-  margin: 1rem 0;
+  margin: 1rem;
   width: auto;
   height: auto;
-  max-width: 450px;
   background-color: rgba(200, 200, 200, 0.4);
   border-top: 3px solid #2c3e50;
   border-bottom: 3px solid #2c3e50;
@@ -127,7 +164,6 @@ a {
 }
 
 .section:hover {
-  background-color: rgba(200, 200, 200, 0.4);
   border-top: 4px solid #1ec896;
   border-bottom: 4px solid #1ec896;
 }
@@ -141,23 +177,9 @@ a {
 
 .loader {
   margin: 0.5rem auto;
-  width: 90%;
+  width: 85%;
   height: 90px;
 }
-
-/* @media screen and (min-width: 768px) {
-  .content {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .content {
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-} */
 
 /* *************** Wave Loader *************** */
 .wave-loader {
