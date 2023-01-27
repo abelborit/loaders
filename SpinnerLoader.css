@@ -1,0 +1,40 @@
+/* *************** Spinner Loader *************** */
+.loader {
+  margin: 0.5rem auto;
+  width: 85%;
+  height: 90px;
+}
+
+.spinner-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.spinner-loader .spinner {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  border: 10px solid #162534;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+    border-top-color: #3498db;
+    border-bottom-color: #3498db;
+    border-right-color: transparent;
+    border-left-color: transparent;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
